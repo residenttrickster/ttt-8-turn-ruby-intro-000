@@ -6,7 +6,7 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def valid_move? (board, index)
+def valid_move?(board, index)
   if position_taken?(board,index) || index < 0 || index > 8
     return false
   elsif !position_taken?(board, index)
@@ -15,7 +15,7 @@ def valid_move? (board, index)
 end
 
 
-def position_taken? (board, index)
+def position_taken?(board, index)
   if board[index] == "" || board[index] == " " || board[index] == nil
     return false
   else
@@ -31,8 +31,8 @@ def move(board, index, character_player="X")
   board[index] = character_player
 end
 
-def turn
-puts "Please enter 1-9!"
+def turn(board)
+puts "Please enter 1-9:"
 index = input_to_index(input)
 char = current_player
 if valid_move?(index)
