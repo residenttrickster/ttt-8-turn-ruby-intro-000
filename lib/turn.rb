@@ -38,4 +38,5 @@ input = input_to_index(input)
 if valid_move?(answer, index)
 move(board, index, character_player="X")
 puts display_board(board)
+  end
 end
